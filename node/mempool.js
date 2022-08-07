@@ -49,6 +49,7 @@ module.exports = ({Constants, Transaction}, factoryOptions) =>
             for (let txHash of arrTxHashes) {
 
                 // TODO: check could be here descendants (i.e. when we undo block, from misbehaving concilium). if so - implement queue
+                //
                 // TODO: think about: is it problem that TX isn't present in mempool, but present in block
                 let mapWithTx;
                 if (this._mapLocalTxns.has(txHash)) {
